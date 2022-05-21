@@ -1,6 +1,6 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bloc/bloc.dart';
 import 'package:news_app/core/blocObserver/bloc_observer.dart';
 import 'package:news_app/core/cacheHelper/cache_helper.dart';
 import 'package:news_app/core/cubit/cubit.dart';
@@ -16,7 +16,6 @@ void main() async {
   DioHelper.init();
   await CacheHelper.init();
   bool? isDark = CacheHelper.getData(key: 'isDark');
-
   runApp(MyApp(isDark: isDark));
 }
 
